@@ -169,6 +169,10 @@ export function FAQSection() {
         {/* --- Hubungi Kami CTA Button: Now unique and bigger --- */}
         <div className="mt-16 text-center">
           {" "}
+          {/* Increased top margin */}
+          <p className="text-lg text-[#5C5C5C] mb-8 max-w-2xl mx-auto">
+            Punya pertanyaan lain? Jangan ragu untuk menghubungi kami!
+          </p>
           <Button
             asChild
             // Custom styling for a unique, bigger button
@@ -196,7 +200,7 @@ export function FAQSection() {
               {" "}
               {/* Increased gap */}
               <Phone className="w-6 h-6 md:w-7 md:h-7" /> {/* Bigger icon */}
-              Hubungi Disini Jika Pertanyaan Belum Terjawab
+              Hubungi Kami
             </Link>
           </Button>
         </div>
