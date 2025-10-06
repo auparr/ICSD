@@ -34,17 +34,22 @@ export function HeroSection() {
             backgroundImage: `url('/children-studying-under-trees-with-sunlight-filter.jpg')`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/10" />
+        {/*
+          IMPROVEMENT: Changed the overlay from a light gradient 
+          (from-black/40 via-black/20 to-black/10) 
+          to a stronger, uniform black overlay (bg-black/60) 
+          for maximum contrast.
+        */}
+        <div className="absolute inset-0 bg-black/60" /> {/* <-- THE FIX */}
       </div>
 
-      {/* Floating Leaf Decorations */}
-      {/* Increased the size and opacity of the floating elements slightly for more presence */}
-      <div className="absolute top-20 left-10 opacity-30 animate-float">
+      {/* Floating Leaf Decorations (sm:hidden added for mobile clarity) */}
+      <div className="absolute top-20 left-10 opacity-30 animate-float sm:block hidden">
         <Leaf className="w-20 h-20 text-green-300" />
       </div>
       <div
-        className="absolute top-40 right-20 opacity-30 animate-float"
-        style={{ animationDelay: "1.5s" }} // Increased delay for variety
+        className="absolute top-40 right-20 opacity-30 animate-float sm:block hidden"
+        style={{ animationDelay: "1.5s" }}
       >
         <Leaf className="w-14 h-14 text-green-300" />
       </div>
