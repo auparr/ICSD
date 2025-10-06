@@ -67,7 +67,7 @@ export function JourneySection() {
   const activeData = journeySteps[activeStep];
 
   return (
-    <section id="perjalanan" className="relative bg-[#E8F5E9] py-20 md:py-32">
+    <section id="perjalanan" className="relative bg-[#E8F5E9] py-15 md:py-20">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

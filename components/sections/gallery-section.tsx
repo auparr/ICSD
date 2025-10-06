@@ -113,10 +113,7 @@ export function GallerySection() {
   };
 
   return (
-    <section
-      id="galeri"
-      className="relative bg-gradient-to-b from-white to-[#FDFBF6] py-20 md:py-32"
-    >
+    <section id="galeri" className="relative bg-[#E8F5E9] py-10 pb-20 md:py-25">
       <div className="container mx-auto px-4">
         {/* Section Header and Category Filter remain the same */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -202,7 +199,7 @@ export function GallerySection() {
       {/* Bottom Curved Divider */}
       <div className="absolute bottom-0 left-0 right-0">
         {/* Use flip prop to make the hill divider face up, creating a gentle slope before the next section */}
-        <CurvedDivider variant="wave" color="#fdfbf7" flip={false} />
+        <CurvedDivider variant="wave" color="#f7fbfa" flip={false} />
       </div>
     </section>
   );
