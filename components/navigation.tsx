@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+// Import ChevronDown/Up for the toggle icon
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuMenuOpen] = useState(false);
+  // NEW STATE for the mobile program menu toggle
+  const [openProgramMenu, setOpenProgramMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,21 +21,32 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Define main navigation links
   const navLinks = [
     { href: "#filosofi", label: "Filosofi" },
-    { href: "#perjalanan", label: "Perjalanan Belajar" },
+    { href: "#perjalanan", label: "Program Pendidikan", isToggle: true }, // <-- Mark as toggle
     { href: "#galeri", label: "Galeri" },
+    { href: "#prestasi", label: "Prestasi" },
     { href: "#testimoni", label: "Testimoni" },
-    { href: "#kontak", label: "Kontak" },
+    { href: "#faq", label: "Kontak dan FAQ" },
+  ];
+
+  // New section links for the dropdown (KB, TK, MI)
+  const programLinks = [
+    { href: "#perjalanan", label: "Kelompok Bermain (KB)" },
+    { href: "#perjalanan", label: "Taman Kanak-kanak (TK)" },
+    { href: "#perjalanan", label: "Madrasah Ibtida'iyah (MI)" },
   ];
 
   // Define Glassmorphism Class
   const glassmorphClass =
     "bg-[#FDFBF6]/60 backdrop-blur-xl border border-white/30 shadow-md ring-1 ring-white/20";
-  // bg-[#FDFBF6]/60: Translucent light background
-  // backdrop-blur-xl: Strong blur effect
-  // border border-white/30: Subtle light border
-  // shadow-md ring-1 ring-white/20: Adds depth and a final shine/ring effect
+
+  // Helper function to close both menus and reset the program toggle
+  const closeAllMenus = () => {
+    setIsMobileMenuMenuOpen(false);
+    setOpenProgramMenu(false);
+  };
 
   return (
     <nav
@@ -44,7 +58,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo (unchanged) */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-[#5BAA6A] flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-lg">S</span>
@@ -68,24 +82,42 @@ export function Navigation() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation (Dropdown remains for desktop) */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-medium transition-colors ${
-                  isScrolled
-                    ? "text-[#2E2E2E] hover:text-[#5BAA6A]"
-                    : "text-white hover:text-[#F4C27F]"
-                }`}
-              >
-                {link.label}
-              </Link>
+              <div key={link.href} className="group relative">
+                <Link
+                  href={link.href}
+                  className={`font-medium transition-colors flex items-center gap-1 ${
+                    isScrolled
+                      ? "text-[#2E2E2E] hover:text-[#5BAA6A]"
+                      : "text-white hover:text-[#F4C27F]"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+
+                {/* Dropdown Menu (only for Program Pendidikan) */}
+                {link.label === "Program Pendidikan" && (
+                  <div className="absolute hidden group-hover:block top-full pt-4 min-w-40">
+                    <div className="bg-white rounded-lg shadow-xl ring-1 ring-black/5 p-2 transition-all duration-300">
+                      {programLinks.map((program) => (
+                        <Link
+                          key={program.label}
+                          href={program.href} // Point back to the journey section
+                          className="block px-3 py-2 text-sm text-[#2E2E2E] hover:bg-[#E8F5E9] hover:text-[#5BAA6A] rounded-md whitespace-nowrap"
+                        >
+                          {program.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button (unchanged) */}
           <div className="hidden md:block">
             <Button
               asChild
@@ -95,12 +127,15 @@ export function Navigation() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (unchanged) */}
           <button
             className={`md:hidden transition-colors ${
               isScrolled ? "text-[#2E2E2E]" : "text-white"
             }`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => {
+              setIsMobileMenuMenuOpen(!isMobileMenuOpen);
+              setOpenProgramMenu(false); // Close sub-menu when main menu is toggled
+            }}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -108,24 +143,56 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        {/* Mobile menu stays solid for readability, but uses the same background color */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 bg-[#FDFBF6] rounded-2xl p-4 shadow-xl">
+          <div className="md:hidden mt-4 pb-4 space-y-2 bg-[#FDFBF6] rounded-2xl p-4 shadow-xl">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block text-[#2E2E2E] hover:text-[#5BAA6A] transition-colors font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
+              <div key={link.label}>
+                {link.isToggle ? (
+                  // PROGRAM PENDIDIKAN TOGGLE BUTTON
+                  <button
+                    className="flex justify-between items-center w-full text-[#2E2E2E] hover:text-[#5BAA6A] transition-colors font-medium py-2"
+                    onClick={() => setOpenProgramMenu(!openProgramMenu)}
+                  >
+                    <span>{link.label}</span>
+                    {openProgramMenu ? (
+                      <ChevronUp size={20} />
+                    ) : (
+                      <ChevronDown size={20} />
+                    )}
+                  </button>
+                ) : (
+                  // REGULAR LINK
+                  <Link
+                    href={link.href}
+                    className="block text-[#2E2E2E] hover:text-[#5BAA6A] transition-colors font-medium py-2"
+                    onClick={closeAllMenus}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+
+                {/* Sub-menu items for Program Pendidikan on Mobile (Conditionally rendered) */}
+                {link.isToggle && openProgramMenu && (
+                  <div className="pl-4 space-y-1 border-l border-[#5BAA6A]/50 ml-4 py-1">
+                    {programLinks.map((program) => (
+                      <Link
+                        key={program.label}
+                        href={program.href}
+                        className="block text-sm text-[#5C5C5C] hover:text-[#5BAA6A] py-1 transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        — {program.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <Button
               asChild
-              className="w-full bg-[#5BAA6A] hover:bg-[#4a9159] text-white rounded-full shadow-lg"
+              className="w-full bg-[#5BAA6A] hover:bg-[#4a9159] text-white rounded-full shadow-lg mt-4"
             >
-              <Link href="#daftar" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="#daftar" onClick={closeAllMenus}>
                 Daftar Sekarang
               </Link>
             </Button>

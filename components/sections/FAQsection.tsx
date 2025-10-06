@@ -99,7 +99,7 @@ export function FAQSection() {
     {
       question: "Apa perbedaan Sekolah Alam dengan sekolah formal lainnya?",
       answer:
-        "Sekolah Alam fokus pada **pembelajaran berbasis pengalaman** dan eksplorasi langsung di alam terbuka (outdoor learning). Kami mengintegrasikan kurikulum nasional dengan nilai-nilai Islam dan pengembangan karakter, menjadikannya kontekstual dan menyenangkan, bukan hanya berfokus pada teori di kelas.",
+        "Sekolah Alam fokus pada  pembelajaran berbasis pengalaman  dan eksplorasi langsung di alam terbuka (outdoor learning). Kami mengintegrasikan kurikulum nasional dengan nilai-nilai Islam dan pengembangan karakter, menjadikannya kontekstual dan menyenangkan, bukan hanya berfokus pada teori di kelas.",
       value: "item-1",
     },
     {
@@ -112,7 +112,7 @@ export function FAQSection() {
       question:
         "Apakah kurikulum Sekolah Alam Insan Cendekia Sunan Drajat sesuai Kurikulum Nasional?",
       answer:
-        "Ya, kurikulum kami mengacu pada **Kurikulum Nasional** yang diperkaya dengan metode pembelajaran alam dan karakter Islami. Lulusan kami memiliki kompetensi akademik yang setara sekaligus memiliki kematangan emosional dan spiritual.",
+        "Ya, kurikulum kami mengacu pada  Kurikulum Nasional  yang diperkaya dengan metode pembelajaran alam dan karakter Islami. Lulusan kami memiliki kompetensi akademik yang setara sekaligus memiliki kematangan emosional dan spiritual.",
       value: "item-3",
     },
     {
