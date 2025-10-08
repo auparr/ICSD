@@ -1,8 +1,15 @@
-import Link from "next/link"
-import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link";
+import {
+  Facebook,
+  Instagram,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     tentang: [
@@ -23,13 +30,13 @@ export function Footer() {
       { label: "Kalender Akademik", href: "#" },
       { label: "Galeri", href: "#galeri" },
     ],
-  }
+  };
 
   const socialMedia = [
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Instagram, href: "#", label: "Instagram" },
     { icon: Youtube, href: "#", label: "YouTube" },
-  ]
+  ];
 
   return (
     <footer className="bg-gradient-to-br from-[#2E2E2E] to-[#1A1A1A] text-white">
@@ -39,13 +46,16 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Salam ICSD</h3>
             <p className="text-white/70 leading-relaxed mb-6">
-              Sekolah Alam Insan Cendekia Sunan Drajat - Menumbuhkan generasi yang cinta alam, berakhlak mulia, dan
-              berprestasi.
+              Sekolah Alam Insan Cendekia Sunan Drajat - Menumbuhkan generasi
+              yang cinta alam, berakhlak mulia, dan berprestasi.
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5" />
-                <span className="text-white/70 text-sm">Jl. Sunan Drajat No. 123, Lamongan, Jawa Timur 62211</span>
+                <span className="text-white/70 text-sm">
+                  495Q+HFM, Banjaranyar, Drajat, Kec. Paciran, Kabupaten
+                  Lamongan, Jawa Timur 62264
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#6BB9E0] flex-shrink-0" />
@@ -53,7 +63,9 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#F4C27F] flex-shrink-0" />
-                <span className="text-white/70 text-sm">info@salamicsd.sch.id</span>
+                <span className="text-white/70 text-sm">
+                  icsdsalam@gmail.com
+                </span>
               </div>
             </div>
           </div>
@@ -64,7 +76,10 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.tentang.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} className="text-white/70 hover:text-[#5BAA6A] transition-colors text-sm">
+                  <Link
+                    href={link.href}
+                    className="text-white/70 hover:text-[#5BAA6A] transition-colors text-sm"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -77,7 +92,10 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.program.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} className="text-white/70 hover:text-[#5BAA6A] transition-colors text-sm">
+                  <Link
+                    href={link.href}
+                    className="text-white/70 hover:text-[#5BAA6A] transition-colors text-sm"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -90,7 +108,10 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.informasi.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} className="text-white/70 hover:text-[#5BAA6A] transition-colors text-sm">
+                  <Link
+                    href={link.href}
+                    className="text-white/70 hover:text-[#5BAA6A] transition-colors text-sm"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -105,7 +126,7 @@ export function Footer() {
             {/* Social Media */}
             <div className="flex gap-4">
               {socialMedia.map((social, index) => {
-                const Icon = social.icon
+                const Icon = social.icon;
                 return (
                   <a
                     key={index}
@@ -115,19 +136,27 @@ export function Footer() {
                   >
                     <Icon className="w-5 h-5" />
                   </a>
-                )
+                );
               })}
             </div>
 
             {/* Copyright */}
-            <p className="text-white/50 text-sm text-center">© {currentYear} Salam ICSD. Semua hak dilindungi.</p>
+            <p className="text-white/50 text-sm text-center">
+              © {currentYear} Salam ICSD. Semua hak dilindungi.
+            </p>
 
             {/* Additional Links */}
             <div className="flex gap-6 text-sm">
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
+              <Link
+                href="#"
+                className="text-white/50 hover:text-white transition-colors"
+              >
                 Kebijakan Privasi
               </Link>
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
+              <Link
+                href="#"
+                className="text-white/50 hover:text-white transition-colors"
+              >
                 Syarat & Ketentuan
               </Link>
             </div>
@@ -135,5 +164,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

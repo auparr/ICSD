@@ -4,15 +4,15 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { CurvedDivider } from "@/components/curved-divider";
+import { motion, AnimatePresence } from "framer-motion"; // <-- 1. Import motion components
 
-const ITEMS_PER_PAGE = 3; // Define how many items to show at a time
+const ITEMS_PER_PAGE = 3;
 
 export function GallerySection() {
   const [selectedCategory, setSelectedCategory] = useState("semua");
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
   const categories = [
-    // ... categories array remains the same
     { id: "semua", label: "Semua" },
     { id: "pembelajaran", label: "Pembelajaran" },
     { id: "kegiatan", label: "Kegiatan" },
@@ -20,7 +20,6 @@ export function GallerySection() {
   ];
 
   const galleryItems = [
-    // ... galleryItems array remains the same
     {
       id: 1,
       category: "pembelajaran",
@@ -93,6 +92,29 @@ export function GallerySection() {
     },
   ];
 
+  // --- 2. Animation variants for the grid and items ---
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   const filteredItems =
     selectedCategory === "semua"
       ? galleryItems
@@ -102,7 +124,6 @@ export function GallerySection() {
     setVisibleCount((prevCount) => prevCount + ITEMS_PER_PAGE);
   };
 
-  // 1. Create a new handler function to hide items
   const handleHide = () => {
     setVisibleCount(ITEMS_PER_PAGE);
   };
@@ -115,7 +136,7 @@ export function GallerySection() {
   return (
     <section id="galeri" className="relative bg-[#E8F5E9] py-10 pb-20 md:py-25">
       <div className="container mx-auto px-4">
-        {/* Section Header and Category Filter remain the same */}
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-block bg-[#5BAA6A]/10 text-[#5BAA6A] px-4 py-2 rounded-full text-sm font-semibold mb-4">
             Galeri Kegiatan
@@ -129,6 +150,7 @@ export function GallerySection() {
           </p>
         </div>
 
+        {/* Category Filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
@@ -145,15 +167,22 @@ export function GallerySection() {
           ))}
         </div>
 
-        {/* Gallery Grid remains the same */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.slice(0, visibleCount).map((item, index) => (
-            <div
+        {/* --- 2. Animated Gallery Grid --- */}
+        <motion.div
+          key={selectedCategory} // Re-trigger animation when category changes
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {filteredItems.slice(0, visibleCount).map((item) => (
+            <motion.div
               key={item.id}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              style={{
-                animationDelay: `${index * 100}ms`,
-              }}
+              variants={itemVariants}
+              // --- 3. Mobile Interaction Fix ---
+              // The `group` class enables effects on child elements.
+              // `active:scale-95` gives tactile feedback on tap for mobile.
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 active:scale-95"
             >
               <div className="relative h-64 overflow-hidden">
                 <Image
@@ -173,13 +202,12 @@ export function GallerySection() {
                   {item.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* View More Button -- FIXED */}
+        {/* Load More / Hide Button */}
         <div className="text-center mt-12 mb-4">
-          {/* 2. Update the button logic */}
           {filteredItems.length > ITEMS_PER_PAGE && (
             <Button
               onClick={
@@ -198,7 +226,6 @@ export function GallerySection() {
       </div>
       {/* Bottom Curved Divider */}
       <div className="absolute bottom-0 left-0 right-0">
-        {/* Use flip prop to make the hill divider face up, creating a gentle slope before the next section */}
         <CurvedDivider variant="wave" color="#f7fbfa" flip={false} />
       </div>
     </section>

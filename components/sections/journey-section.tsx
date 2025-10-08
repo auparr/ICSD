@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Sparkles, Compass, Trophy, Check } from "lucide-react"; // <-- Added Check
+import Link from "next/link"; // <-- 1. Import the Link component
+import { Sparkles, Compass, Trophy, Check } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion"; // <-- Added motion
+import { motion } from "framer-motion";
 
 export function JourneySection() {
   const [activeStep, setActiveStep] = useState(0);
 
   const journeySteps = [
-    // ... (unchanged data)
     {
       id: "kb",
       icon: Sparkles,
@@ -27,6 +27,7 @@ export function JourneySection() {
       ],
       image: "/kb.jpg",
       color: "#F4C27F",
+      href: "/program-pendidikan/KB",
     },
     {
       id: "tk",
@@ -44,6 +45,7 @@ export function JourneySection() {
       ],
       image: "/gallery-art-craft.jpg",
       color: "#6BB9E0",
+      href: "/program-pendidikan/TK",
     },
     {
       id: "mi",
@@ -61,13 +63,14 @@ export function JourneySection() {
       ],
       image: "/gallery-learning-outdoor.jpg",
       color: "#5BAA6A",
+      href: "/program-pendidikan/MI",
     },
   ];
 
   const activeData = journeySteps[activeStep];
 
   return (
-    <section id="perjalanan" className="relative bg-[#E8F5E9] py-15 md:py-20">
+    <section id="program" className="relative bg-[#E8F5E9] py-15 md:py-20">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -83,20 +86,17 @@ export function JourneySection() {
           </p>
         </div>
 
-        {/* Journey Timeline - Mobile stacking enforced */}
+        {/* Journey Timeline */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
           {journeySteps.map((step, index) => {
             const Icon = step.icon;
             return (
               <div key={step.id} className="flex items-center w-full md:w-auto">
-                {" "}
-                {/* <-- Added w-full for mobile */}
                 <button
                   onClick={() => setActiveStep(index)}
                   className={`flex items-center gap-3 px-6 py-4 rounded-2xl transition-all w-full text-left ${
-                    // <-- Added w-full
                     activeStep === index
-                      ? "bg-white shadow-xl scale-[1.01] md:scale-105" // Slightly less scale on mobile
+                      ? "bg-white shadow-xl scale-[1.01] md:scale-105"
                       : "bg-white/50 hover:bg-white/80 hover:shadow-lg"
                   }`}
                 >
@@ -116,7 +116,6 @@ export function JourneySection() {
                     <div className="text-xs text-[#5C5C5C]">{step.age}</div>
                   </div>
                 </button>
-                {/* Connector line only on desktop */}
                 {index < journeySteps.length - 1 && (
                   <div className="hidden md:block w-8 h-0.5 bg-[#5BAA6A]/30 mx-2" />
                 )}
@@ -125,9 +124,9 @@ export function JourneySection() {
           })}
         </div>
 
-        {/* Active Step Content - Wrapped in motion.div for animation */}
+        {/* Active Step Content */}
         <motion.div
-          key={activeData.id} // <-- KEY: Triggers animation on change
+          key={activeData.id}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -144,12 +143,11 @@ export function JourneySection() {
                 className="w-full h-full object-cover"
               />
               <div
-                className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+                className="absolute inset-0"
                 style={{
                   background: `linear-gradient(to top, ${activeData.color}40, transparent)`,
                 }}
               />
-              {/* Badge */}
               <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
                 <span className="text-sm font-semibold text-[#2E2E2E]">
                   {activeData.age}
@@ -169,7 +167,7 @@ export function JourneySection() {
                   <div
                     className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                     style={{
-                      backgroundColor: activeData.color, // Simplified inner color
+                      backgroundColor: activeData.color,
                     }}
                   />
                 </div>
@@ -185,7 +183,6 @@ export function JourneySection() {
                 {activeData.description}
               </p>
 
-              {/* Highlights - Changed to Checkmarks */}
               <div className="space-y-3 mb-8">
                 {activeData.highlights.map((highlight, idx) => (
                   <div key={idx} className="flex items-start gap-3">
@@ -193,23 +190,26 @@ export function JourneySection() {
                       className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{
                         backgroundColor: `${activeData.color}20`,
-                        color: activeData.color, // Set checkmark color
+                        color: activeData.color,
                       }}
                     >
-                      <Check className="w-4 h-4" /> {/* Use Check icon */}
+                      <Check className="w-4 h-4" />
                     </div>
                     <span className="text-[#2E2E2E]">{highlight}</span>
                   </div>
                 ))}
               </div>
 
+              {/* --- 2. THE FIX --- */}
               <Button
-                className="rounded-full px-8 hover:opacity-90 transition-opacity" // Added hover effect
+                asChild
+                className="rounded-full px-8 hover:opacity-90 transition-opacity"
                 style={{
                   backgroundColor: activeData.color,
                 }}
               >
-                Pelajari Lebih Lanjut
+                {/* The <Link> component is now the child, making the button visible and functional */}
+                <Link href={activeData.href}>Pelajari Lebih Lanjut</Link>
               </Button>
             </div>
           </div>

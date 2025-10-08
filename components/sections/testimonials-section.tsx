@@ -50,7 +50,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimoni"
-      className="relative bg-gradient-to-br from-[#5BAA6A]/5 via-[#6BB9E0]/5 to-[#F4C27F]/5 py-20 md:py-32 overflow-hidden"
+      className="relative bg-gradient-to-br from-[#5BAA6A]/5 via-[#6BB9E0]/5 to-[#F4C27F]/5 py-16 md:py-20 overflow-hidden"
     >
       {/* Decorative Elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-[#5BAA6A]/10 rounded-full blur-3xl" />
@@ -122,17 +122,17 @@ export function TestimonialsSection() {
             <div className="flex justify-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
-                className="w-12 h-12 rounded-full bg-[#5BAA6A]/10 hover:bg-[#5BAA6A] text-[#5BAA6A] hover:text-white transition-all flex items-center justify-center shadow-sm hover:shadow-lg"
+                className="w-14 h-14 rounded-full bg-[#4A9958] text-white hover:bg-[#3A7745] transition-all flex items-center justify-center shadow-md hover:shadow-xl"
                 aria-label="Testimoni sebelumnya"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-7 h-7" />
               </button>
               <button
                 onClick={nextTestimonial}
-                className="w-12 h-12 rounded-full bg-[#5BAA6A]/10 hover:bg-[#5BAA6A] text-[#5BAA6A] hover:text-white transition-all flex items-center justify-center shadow-sm hover:shadow-lg"
+                className="w-14 h-14 rounded-full bg-[#4A9958] text-white hover:bg-[#3A7745] transition-all flex items-center justify-center shadow-md hover:shadow-xl"
                 aria-label="Testimoni berikutnya"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-7 h-7" />
               </button>
             </div>
 

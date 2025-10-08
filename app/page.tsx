@@ -8,6 +8,7 @@ import { ContactSection } from "@/components/sections/contact-section";
 import { Footer } from "@/components/footer";
 import { FAQSection } from "@/components/sections/FAQsection";
 import { CTASection } from "@/components/sections/CTAsection";
+import { LocationSection } from "@/components/sections/location";
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -18,7 +19,8 @@ export default function Home() {
       <GallerySection />
       <TestimonialsSection />
       <FAQSection />
-      {/* <ContactSection /> */}
+      <LocationSection />
+      {/* <CTASection /> */}
       <Footer />
     </main>
   );
