@@ -1,16 +1,20 @@
+// FIX: no "use client" needed — this is a layout wrapper with no interactivity.
+// Running as a Server Component reduces JS bundle size.
+import * as React from "react"; // FIX: missing — React.ReactNode is undefined without this
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import Image from "next/image";
 
-// Define the types for the props our layout will accept
-type ProgramPageLayoutProps = {
+// ─── Types ────────────────────────────────────────────────────────────────────
+interface ProgramPageLayoutProps {
   title: string;
   ageRange: string;
   description: string;
   imageUrl: string;
-  children: React.ReactNode; // This will be the main content of the page
-};
+  children: React.ReactNode;
+}
 
+// ─── Component ────────────────────────────────────────────────────────────────
 export function ProgramPageLayout({
   title,
   ageRange,
@@ -22,14 +26,16 @@ export function ProgramPageLayout({
     <>
       <Navigation />
       <main className="bg-white">
-        {/* Hero Section */}
+        {/* Hero */}
         <div className="relative h-[50vh] min-h-[300px] bg-gray-800">
           <Image
             src={imageUrl}
             alt={`Suasana belajar untuk ${title}`}
             fill
-            className="object-cover"
             priority
+            // FIX: missing sizes prop — Next.js warns and uses suboptimal image size without it
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20" />
           <div className="absolute inset-0 flex items-end">
@@ -47,12 +53,9 @@ export function ProgramPageLayout({
           </div>
         </div>
 
-        {/* Main Content Area */}
+        {/* Content */}
         <div className="container mx-auto px-4 py-16 md:py-20">
-          <div className="prose lg:prose-xl max-w-4xl mx-auto">
-            {/* The unique content for each page will be rendered here */}
-            {children}
-          </div>
+          <div className="prose lg:prose-xl max-w-4xl mx-auto">{children}</div>
         </div>
       </main>
       <Footer />

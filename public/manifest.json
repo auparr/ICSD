@@ -1,0 +1,22 @@
+{
+  "name": "Salam ICSD – Sekolah Alam Lamongan",
+  "short_name": "Salam ICSD",
+  "description": "Sekolah Alam Insan Cendekia Sunan Drajat – Belajar Bersama Alam, Tumbuh dengan Iman.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFBF6",
+  "theme_color": "#5BAA6A",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "/school-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/school-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

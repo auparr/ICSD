@@ -179,7 +179,7 @@ function useToast() {
         listeners.splice(index, 1)
       }
     }
-  }, [state])
+  }, []) // FIX: was [state] — caused listener re-registration on every state update (memory leak)
 
   return {
     ...state,
