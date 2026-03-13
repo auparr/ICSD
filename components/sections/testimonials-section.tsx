@@ -20,7 +20,7 @@ const TESTIMONIALS: Testimonial[] = [
     id: 1,
     name: "Ibu Siti Nurhaliza",
     role: "Orang Tua Siswa KB",
-    image: "/parent-1.jpg",
+    image: "/parent-1.webp",
     quote:
       "Salam ICSD mengubah cara anak saya melihat dunia. Dia tidak hanya belajar membaca dan menulis, tapi juga mencintai alam dan memahami nilai-nilai Islam dengan cara yang menyenangkan. Terima kasih telah menjadi bagian dari perjalanan tumbuh kembangnya.",
     rating: 5,
@@ -29,7 +29,7 @@ const TESTIMONIALS: Testimonial[] = [
     id: 2,
     name: "Bapak Ahmad Fauzi",
     role: "Orang Tua Siswa MI",
-    image: "/parent-2.jpg",
+    image: "/parent-2.webp",
     quote:
       "Kami sangat bersyukur menemukan Salam ICSD. Anak kami menjadi lebih mandiri, bertanggung jawab, dan memiliki akhlak yang baik. Metode pembelajaran berbasis alam membuat dia selalu bersemangat untuk sekolah setiap hari.",
     rating: 5,
@@ -38,7 +38,7 @@ const TESTIMONIALS: Testimonial[] = [
     id: 3,
     name: "Ibu Dewi Lestari",
     role: "Orang Tua Siswa TK",
-    image: "/parent-3.jpg",
+    image: "/parent-3.webp",
     quote:
       "Pendekatan holistik yang diterapkan di Salam ICSD luar biasa. Anak saya tidak hanya pintar secara akademis, tapi juga memiliki empati, kreativitas, dan kecintaan terhadap lingkungan. Ini adalah investasi terbaik untuk masa depannya.",
     rating: 5,

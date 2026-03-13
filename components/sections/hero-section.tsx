@@ -69,7 +69,7 @@ export function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/children-studying-under-trees-with-sunlight-filter.jpg"
+          src="/children-studying-under-trees-with-sunlight-filter.webp"
           alt="Anak-anak belajar di bawah pohon di lingkungan sekolah alam"
           fill
           priority

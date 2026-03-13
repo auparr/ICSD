@@ -175,7 +175,7 @@ export default function TKPage() {
         <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/gallery-learning-outdoor.jpg"
+              src="/gallery-learning-outdoor.webp"
               alt="Anak-anak TK Alam Salam ICSD bereksplorasi di alam terbuka"
               fill
               priority
@@ -383,7 +383,7 @@ export default function TKPage() {
               {/* Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <Image
-                  src="/gallery-nature-walk.jpg"
+                  src="/gallery-nature-walk.webp"
                   alt="Kegiatan harian TK Alam Salam ICSD"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -418,12 +418,12 @@ export default function TKPage() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   {
-                    img: "/gallery-nature-walk.jpg",
+                    img: "/gallery-nature-walk.webp",
                     alt: "Petualangan alam TK",
                     span: "row-span-2",
                   },
                   {
-                    img: "/gallery-art-craft.jpg",
+                    img: "/gallery-art-craft.webp",
                     alt: "Proyek seni TK",
                     span: "aspect-square",
                   },

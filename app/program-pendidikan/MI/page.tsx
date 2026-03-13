@@ -404,7 +404,7 @@ export default function MIPage() {
               {/* Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <Image
-                  src="/archery.jpg"
+                  src="/archery.webp"
                   alt="Siswa MI Salam ICSD berlatih panahan"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -523,9 +523,12 @@ export default function MIPage() {
             {/* Photo strip */}
             <div className="grid grid-cols-3 gap-4 mt-16">
               {[
-                { img: "/archery.jpg", alt: "Ekskul panahan MI" },
-                { img: "/gallery-learning-outdoor.jpg", alt: "Proyek alam MI" },
-                { img: "/gallery-garden-exploration.jpg", alt: "Berkebun MI" },
+                { img: "/archery.webp", alt: "Ekskul panahan MI" },
+                {
+                  img: "/gallery-learning-outdoor.webp",
+                  alt: "Proyek alam MI",
+                },
+                { img: "/gallery-garden-exploration.webp", alt: "Berkebun MI" },
               ].map(({ img, alt }) => (
                 <div
                   key={img}
@@ -601,7 +604,7 @@ export default function MIPage() {
                 <div className="space-y-4">
                   <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery-learning-outdoor.jpg"
+                      src="/gallery-learning-outdoor.webp"
                       alt="Siswa MI belajar di alam"
                       fill
                       sizes="25vw"
@@ -610,7 +613,7 @@ export default function MIPage() {
                   </div>
                   <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery-prayer-time.jpg"
+                      src="/gallery-prayer-time.webp"
                       alt="Sholat berjamaah MI"
                       fill
                       sizes="25vw"
@@ -621,7 +624,7 @@ export default function MIPage() {
                 <div className="space-y-4 mt-8">
                   <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl">
                     <Image
-                      src="/archery.jpg"
+                      src="/archery.webp"
                       alt="Ekskul panahan MI"
                       fill
                       sizes="25vw"
@@ -630,7 +633,7 @@ export default function MIPage() {
                   </div>
                   <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery-garden-exploration.jpg"
+                      src="/gallery-garden-exploration.webp"
                       alt="Proyek kebun MI"
                       fill
                       sizes="25vw"

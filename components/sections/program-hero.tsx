@@ -55,7 +55,7 @@ export function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/kb.jpg"
+          src="/kb.webp"
           alt="Anak-anak Kelompok Bermain di Sekolah Alam Insan Cendekia"
           fill
           priority
