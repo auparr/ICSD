@@ -105,7 +105,7 @@ export function HeroSection() {
             size="lg"
             className="bg-[#5BAA6A] hover:bg-[#4a9159] text-white rounded-full px-8 py-7 text-lg shadow-lg w-full sm:w-auto"
           >
-            <Link href="/ppdb" className="flex items-center gap-2">
+            <Link href="/PPDB" className="flex items-center gap-2">
               Daftar Sekarang
               <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>
