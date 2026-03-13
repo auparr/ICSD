@@ -16,7 +16,7 @@ export function createMetadata({
   title,
   description,
   path,
-  image = "/children-studying-under-trees-with-sunlight-filter.jpg",
+  image = "/children-studying-under-trees-with-sunlight-filter.webp",
   keywords = [],
 }: PageMetaOptions): Metadata {
   const url = `${SITE_URL}${path}`;
@@ -66,7 +66,7 @@ export const kbMetadata = createMetadata({
   description:
     "Program KB Alam untuk anak usia 3-4 tahun di Lamongan. Belajar melalui eksplorasi sensorik, permainan, dan nilai-nilai Islam dasar di lingkungan alam terbuka.",
   path: "/program-pendidikan/KB",
-  image: "/kb.jpg",
+  image: "/kb.webp",
   keywords: ["kelompok bermain lamongan", "KB alam lamongan", "PAUD alam lamongan", "KB Islam lamongan"],
 });
 
@@ -75,7 +75,7 @@ export const tkMetadata = createMetadata({
   description:
     "Program TK Alam untuk anak usia 5-6 tahun di Lamongan. Pembelajaran berbasis proyek alam, eksplorasi sains kontekstual, dan pembiasaan akhlak Islami.",
   path: "/program-pendidikan/TK",
-  image: "/gallery-art-craft.jpg",
+  image: "/gallery-art-craft.webp",
   keywords: ["TK alam lamongan", "taman kanak-kanak lamongan", "TK Islam lamongan"],
 });
 
@@ -84,7 +84,7 @@ export const miMetadata = createMetadata({
   description:
     "Program MI Alam untuk anak usia 7-12 tahun di Lamongan. Kurikulum nasional terintegrasi alam, pengembangan kepemimpinan, dan pembelajaran Al-Quran mendalam.",
   path: "/program-pendidikan/MI",
-  image: "/gallery-learning-outdoor.jpg",
+  image: "/gallery-learning-outdoor.webp",
   keywords: ["MI alam lamongan", "madrasah ibtidaiyah lamongan", "SD Islam alam lamongan"],
 });
 

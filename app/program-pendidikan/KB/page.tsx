@@ -298,7 +298,7 @@ export default function KBPage() {
               {/* Left: image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <Image
-                  src="/gallery-learning-outdoor.jpg"
+                  src="/gallery-learning-outdoor.webp"
                   alt="Kegiatan harian KB Alam Salam ICSD"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -407,18 +407,18 @@ export default function KBPage() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   {
-                    img: "/gallery-garden-exploration.jpg",
+                    img: "/gallery-garden-exploration.webp",
                     alt: "Eksplorasi kebun KB",
                   },
                   {
-                    img: "/gallery-art-craft.jpg",
+                    img: "/gallery-art-craft.webp",
                     alt: "Seni dan kerajinan KB",
                   },
                   {
-                    img: "/gallery-reading-circle.jpg",
+                    img: "/gallery-reading-circle.webp",
                     alt: "Lingkaran membaca KB",
                   },
-                  { img: "/kb.jpg", alt: "Suasana KB Alam" },
+                  { img: "/kb.webp", alt: "Suasana KB Alam" },
                 ].map(({ img, alt }, i) => (
                   <div
                     key={img}

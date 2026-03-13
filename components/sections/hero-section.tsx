@@ -96,6 +96,7 @@ export function HeroSection() {
 
       {/* Main content */}
       <div className="container mx-auto px-4 z-10 pt-20 pb-32 md:pb-20">
+        <h1>SITUS MASIH DALAM TAHAP PENGEMBANGAN!</h1>
         <motion.div
           className="max-w-4xl mx-auto text-center"
           variants={containerVariants}

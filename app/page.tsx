@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Salam ICSD",
     images: [
       {
-        url: "/children-studying-under-trees-with-sunlight-filter.jpg",
+        url: "/children-studying-under-trees-with-sunlight-filter.webp",
         width: 1200,
         height: 630,
         alt: "Anak-anak belajar di bawah pohon di Sekolah Alam Insan Cendekia",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Salam ICSD – Sekolah Alam",
     description: "Belajar Bersama Alam, Tumbuh dengan Iman.",
-    images: ["/children-studying-under-trees-with-sunlight-filter.jpg"],
+    images: ["/children-studying-under-trees-with-sunlight-filter.webp"],
   },
   alternates: {
     canonical: "https://salamicsd.sch.id",

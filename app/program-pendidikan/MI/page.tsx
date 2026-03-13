@@ -235,7 +235,7 @@ export default function MIPage() {
         <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/gallery-learning-outdoor.jpg"
+              src="/gallery-learning-outdoor.webp"
               alt="Siswa MI Alam Salam ICSD belajar di alam terbuka"
               fill
               priority

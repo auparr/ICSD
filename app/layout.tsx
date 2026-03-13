@@ -11,7 +11,7 @@ const geist = Geist({
 });
 
 // ─── Site-wide base URL ───────────────────────────────────────────────────────
-export const SITE_URL = "https://salamicsd.sch.id"; // change to actual domain
+export const SITE_URL = "https://salamicsd.vercel.app"; // change to actual domain
 
 // ─── Viewport (separate from metadata per Next.js 14+ requirement) ────────────
 export const viewport: Viewport = {
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
       "Sekolah Alam terbaik di Lamongan. Pendidikan berbasis alam dan nilai Islam untuk KB, TK, dan MI. Belajar Bersama Alam, Tumbuh dengan Iman.",
     images: [
       {
-        url: "/children-studying-under-trees-with-sunlight-filter.jpg",
+        url: "/children-studying-under-trees-with-sunlight-filter.webp",
         width: 1200,
         height: 630,
         alt: "Anak-anak belajar di alam terbuka di Sekolah Alam Insan Cendekia Sunan Drajat Lamongan",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     title: "Salam ICSD – Sekolah Alam Lamongan",
     description:
       "Pendidikan berbasis alam dan nilai Islam. KB, TK, MI di Lamongan, Jawa Timur.",
-    images: ["/children-studying-under-trees-with-sunlight-filter.jpg"],
+    images: ["/children-studying-under-trees-with-sunlight-filter.webp"],
   },
 
   // ── Robots ────────────────────────────────────────────────────────────────
@@ -150,7 +150,7 @@ export default function RootLayout({
               alternateName: ["Salam ICSD", "Sekolah Alam ICSD"],
               url: SITE_URL,
               logo: `${SITE_URL}/school-logo.png`,
-              image: `${SITE_URL}/children-studying-under-trees-with-sunlight-filter.jpg`,
+              image: `${SITE_URL}/children-studying-under-trees-with-sunlight-filter.webp`,
               description:
                 "Sekolah Alam berbasis Islam di Lamongan, Jawa Timur. Menyediakan jenjang Kelompok Bermain (KB), Taman Kanak-kanak (TK), dan Madrasah Ibtidaiyah (MI).",
               address: {
