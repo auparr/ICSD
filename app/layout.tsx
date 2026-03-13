@@ -11,7 +11,7 @@ const geist = Geist({
 });
 
 // ─── Site-wide base URL ───────────────────────────────────────────────────────
-export const SITE_URL = "https://salamicsd.vercel.app"; // change to actual domain
+export const SITE_URL = "https://salam-icsd.vercel.app"; // change to actual domain
 
 // ─── Viewport (separate from metadata per Next.js 14+ requirement) ────────────
 export const viewport: Viewport = {
@@ -209,9 +209,10 @@ export default function RootLayout({
                 ],
               },
               sameAs: [
-                // Add your real social media URLs here
-                // "https://www.facebook.com/salamicsd",
-                // "https://www.instagram.com/salamicsd",
+                "https://www.instagram.com/sekolahalam_icsd",
+                "https://www.facebook.com/paudmuawanah.graha",
+                "https://www.instagram.com/paud.insancendekia.ppsd",
+                "https://www.instagram.com/mi_plus.insancendekia.ppsd",
               ],
             }),
           }}

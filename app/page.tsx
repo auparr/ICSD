@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Salam ICSD – Sekolah Alam Insan Cendekia Sunan Drajat",
     description: "Belajar Bersama Alam, Tumbuh dengan Iman.",
-    url: "https://salamicsd.vercel.app",
+    url: "https://salam-icsd.vercel.app",
     siteName: "Salam ICSD",
     images: [
       {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     images: ["/children-studying-under-trees-with-sunlight-filter.webp"],
   },
   alternates: {
-    canonical: "https://salamicsd.vercel.app",
+    canonical: "https://salam-icsd.vercel.app",
   },
   robots: {
     index: true,
