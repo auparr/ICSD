@@ -104,10 +104,9 @@ export const metadata: Metadata = {
   },
 
   // ── Verification (add after registering in Google Search Console) ─────────
-  // verification: {
-  //   google: "your-google-site-verification-token",
-  //   other: { "msvalidate.01": "your-bing-token" },
-  // },
+  verification: {
+    google: "EXFluQn3-K4vS2-9510KnhChONwI5Lxjn0W1yBgiVYI",
+  },
 
   // ── App manifest ──────────────────────────────────────────────────────────
   manifest: "/manifest.json",
