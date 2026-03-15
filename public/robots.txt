@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salam-icsd.vercel.app/sitemap.xml
