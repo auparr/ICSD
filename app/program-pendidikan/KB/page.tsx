@@ -54,8 +54,7 @@ const FEATURES = [
   {
     icon: Users,
     title: "Kelas Kecil & Personal",
-    description:
-      "Rasio guru dan murid yang ideal memastikan setiap anak mendapat perhatian dan bimbingan penuh.",
+    description: "Rasio guru dan murid yang ideal memastikan setiap anak mendapat perhatian dan bimbingan penuh.",
     color: "#5BAA6A",
     bg: "bg-[#5BAA6A]/10",
   },
@@ -208,9 +207,8 @@ export default function KBPage() {
                 Mengapa Memilih KB Alam Salam ICSD?
               </h2>
               <p className="text-lg text-[#5C5C5C] leading-relaxed">
-                Kami merancang setiap aspek pembelajaran untuk mendukung tumbuh
-                kembang anak secara holistik — fisik, kognitif, sosial, dan
-                spiritual.
+                Kami merancang setiap aspek pembelajaran untuk mendukung tumbuh kembang anak secara holistik — fisik,
+                kognitif, sosial, dan spiritual.
               </p>
             </div>
 
@@ -220,21 +218,11 @@ export default function KBPage() {
                   key={title}
                   className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-[#5BAA6A]/10"
                 >
-                  <div
-                    className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-6`}
-                  >
-                    <Icon
-                      className="w-7 h-7"
-                      style={{ color }}
-                      aria-hidden="true"
-                    />
+                  <div className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-6`}>
+                    <Icon className="w-7 h-7" style={{ color }} aria-hidden="true" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#2E2E2E] mb-3">
-                    {title}
-                  </h3>
-                  <p className="text-[#5C5C5C] leading-relaxed">
-                    {description}
-                  </p>
+                  <h3 className="text-xl font-bold text-[#2E2E2E] mb-3">{title}</h3>
+                  <p className="text-[#5C5C5C] leading-relaxed">{description}</p>
                 </div>
               ))}
             </div>
@@ -252,9 +240,8 @@ export default function KBPage() {
                 Apa yang Anak Anda Pelajari
               </h2>
               <p className="text-lg text-[#5C5C5C] leading-relaxed">
-                Kurikulum KB kami mengacu pada Kurikulum Merdeka yang diperkaya
-                dengan pendekatan alam dan nilai-nilai Islami di setiap area
-                perkembangan.
+                Kurikulum KB kami mengacu pada Kurikulum Merdeka yang diperkaya dengan pendekatan alam dan nilai-nilai
+                Islami di setiap area perkembangan.
               </p>
             </div>
 
@@ -266,21 +253,14 @@ export default function KBPage() {
                       className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: `${color}20` }}
                     >
-                      <Icon
-                        className="w-6 h-6"
-                        style={{ color }}
-                        aria-hidden="true"
-                      />
+                      <Icon className="w-6 h-6" style={{ color }} aria-hidden="true" />
                     </div>
                     <h3 className="text-xl font-bold text-[#2E2E2E]">{area}</h3>
                   </div>
                   <ul className="space-y-3">
                     {items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <CheckCircle2
-                          className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5"
-                          aria-hidden="true"
-                        />
+                        <CheckCircle2 className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <span className="text-[#5C5C5C]">{item}</span>
                       </li>
                     ))}
@@ -298,7 +278,7 @@ export default function KBPage() {
               {/* Left: image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <Image
-                  src="/gallery-learning-outdoor.webp"
+                  src="/gallery-learning-outdoor.web"
                   alt="Kegiatan harian KB Alam Salam ICSD"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -306,9 +286,7 @@ export default function KBPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-3 shadow-lg">
-                  <p className="text-sm font-semibold text-[#2E2E2E]">
-                    Senin – Jumat
-                  </p>
+                  <p className="text-sm font-semibold text-[#2E2E2E]">Senin – Jumat</p>
                   <p className="text-xs text-[#5C5C5C]">07.15 – 11.00 WIB</p>
                 </div>
               </div>
@@ -323,36 +301,27 @@ export default function KBPage() {
                 </h2>
 
                 <div className="space-y-4">
-                  {DAILY_SCHEDULE.map(
-                    ({ time, activity, icon: Icon, note }) => (
-                      <div key={time} className="flex gap-4 group">
-                        <div className="flex flex-col items-center">
-                          <div className="w-10 h-10 rounded-full bg-[#5BAA6A]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#5BAA6A] transition-colors">
-                            <Icon
-                              className="w-5 h-5 text-[#5BAA6A] group-hover:text-white transition-colors"
-                              aria-hidden="true"
-                            />
-                          </div>
-                          <div className="w-px flex-1 bg-[#5BAA6A]/20 my-1" />
+                  {DAILY_SCHEDULE.map(({ time, activity, icon: Icon, note }) => (
+                    <div key={time} className="flex gap-4 group">
+                      <div className="flex flex-col items-center">
+                        <div className="w-10 h-10 rounded-full bg-[#5BAA6A]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#5BAA6A] transition-colors">
+                          <Icon
+                            className="w-5 h-5 text-[#5BAA6A] group-hover:text-white transition-colors"
+                            aria-hidden="true"
+                          />
                         </div>
-                        <div className="pb-4">
-                          <div className="flex items-center gap-2 mb-1">
-                            <Clock
-                              className="w-3.5 h-3.5 text-[#5BAA6A]"
-                              aria-hidden="true"
-                            />
-                            <span className="text-xs font-semibold text-[#5BAA6A]">
-                              {time}
-                            </span>
-                          </div>
-                          <p className="font-semibold text-[#2E2E2E]">
-                            {activity}
-                          </p>
-                          <p className="text-sm text-[#5C5C5C]">{note}</p>
-                        </div>
+                        <div className="w-px flex-1 bg-[#5BAA6A]/20 my-1" />
                       </div>
-                    ),
-                  )}
+                      <div className="pb-4">
+                        <div className="flex items-center gap-2 mb-1">
+                          <Clock className="w-3.5 h-3.5 text-[#5BAA6A]" aria-hidden="true" />
+                          <span className="text-xs font-semibold text-[#5BAA6A]">{time}</span>
+                        </div>
+                        <p className="font-semibold text-[#2E2E2E]">{activity}</p>
+                        <p className="text-sm text-[#5C5C5C]">{note}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -362,10 +331,7 @@ export default function KBPage() {
         {/* ── Value Proposition ───────────────────────────────────────────── */}
         <section className="py-20 bg-[#2E2E2E] relative overflow-hidden">
           {/* Decorative */}
-          <div
-            aria-hidden="true"
-            className="absolute top-0 right-0 w-96 h-96 bg-[#5BAA6A]/10 rounded-full blur-3xl"
-          />
+          <div aria-hidden="true" className="absolute top-0 right-0 w-96 h-96 bg-[#5BAA6A]/10 rounded-full blur-3xl" />
           <div
             aria-hidden="true"
             className="absolute bottom-0 left-0 w-64 h-64 bg-[#F4C27F]/10 rounded-full blur-3xl"
@@ -381,10 +347,9 @@ export default function KBPage() {
                   Masa Kecil yang Bermakna Membentuk Dewasa yang Luar Biasa
                 </h2>
                 <p className="text-white/70 text-lg leading-relaxed mb-8">
-                  Riset menunjukkan bahwa pengalaman belajar usia 3–4 tahun
-                  membentuk 90% perkembangan otak. Di KB Alam Salam ICSD, kami
-                  memastikan setiap momen menjadi fondasi yang kuat — bukan
-                  sekadar hafalan, tapi pemahaman yang berakar.
+                  Riset menunjukkan bahwa pengalaman belajar usia 3–4 tahun membentuk 90% perkembangan otak. Di KB Alam
+                  Salam ICSD, kami memastikan setiap momen menjadi fondasi yang kuat — bukan sekadar hafalan, tapi
+                  pemahaman yang berakar.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -394,10 +359,7 @@ export default function KBPage() {
                     "Pelaporan perkembangan berkala untuk orang tua",
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-3">
-                      <CheckCircle2
-                        className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5"
-                        aria-hidden="true"
-                      />
+                      <CheckCircle2 className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5" aria-hidden="true" />
                       <span className="text-white/80">{point}</span>
                     </li>
                   ))}
@@ -407,18 +369,18 @@ export default function KBPage() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   {
-                    img: "/gallery-garden-exploration.webp",
+                    img: "/gallery-garden-exploration",
                     alt: "Eksplorasi kebun KB",
                   },
                   {
-                    img: "/gallery-art-craft.webp",
+                    img: "/gallery-art-craft.web",
                     alt: "Seni dan kerajinan KB",
                   },
                   {
-                    img: "/gallery-reading-circle.webp",
+                    img: "/gallery-reading-circle.web",
                     alt: "Lingkaran membaca KB",
                   },
-                  { img: "/kb.webp", alt: "Suasana KB Alam" },
+                  { img: "/kb.web", alt: "Suasana KB Alam" },
                 ].map(({ img, alt }, i) => (
                   <div
                     key={img}

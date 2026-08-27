@@ -55,7 +55,7 @@ export function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/kb.webp"
+          src="/kb.web"
           alt="Anak-anak Kelompok Bermain di Sekolah Alam Insan Cendekia"
           fill
           priority
@@ -73,8 +73,8 @@ export function HeroSection() {
             Kelompok Bermain (KB)
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90 text-balance">
-            Membuka gerbang petualangan pertama anak Anda, tempat rasa ingin
-            tahu bertemu dengan kegembiraan belajar melalui permainan dan alam.
+            Membuka gerbang petualangan pertama anak Anda, tempat rasa ingin tahu bertemu dengan kegembiraan belajar
+            melalui permainan dan alam.
           </p>
         </motion.div>
 

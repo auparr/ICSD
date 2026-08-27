@@ -36,70 +36,70 @@ const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
     category: "pembelajaran",
-    image: "/gallery-learning-outdoor.jpg",
+    image: "/gallery-learning-outdoor.web",
     title: "Belajar di Alam Terbuka",
     description: "Siswa belajar matematika dengan benda-benda alami",
   },
   {
     id: 2,
     category: "kegiatan",
-    image: "/gallery-prayer-time.jpg",
+    image: "/gallery-prayer-time.web",
     title: "Waktu Sholat Berjamaah",
     description: "Pembiasaan ibadah sejak dini",
   },
   {
     id: 3,
     category: "alam",
-    image: "/gallery-garden-exploration.jpg",
+    image: "/gallery-garden-exploration.web",
     title: "Eksplorasi Kebun",
     description: "Mengenal tanaman dan ekosistem",
   },
   {
     id: 4,
     category: "pembelajaran",
-    image: "/gallery-reading-circle.jpg",
+    image: "/gallery-reading-circle.web",
     title: "Lingkaran Membaca",
     description: "Mengembangkan literasi dengan cara menyenangkan",
   },
   {
     id: 5,
     category: "kegiatan",
-    image: "/gallery-art-craft.jpg",
+    image: "/gallery-art-craft.web",
     title: "Seni dan Kerajinan",
     description: "Mengekspresikan kreativitas",
   },
   {
     id: 6,
     category: "alam",
-    image: "/gallery-nature-walk.jpg",
+    image: "/gallery-nature-walk.web",
     title: "Jelajah Alam",
     description: "Petualangan belajar di hutan",
   },
   {
     id: 7,
     category: "pembelajaran",
-    image: "/science-experiment.jpg",
+    image: "/science-experiment.web",
     title: "Eksperimen Sains",
     description: "Belajar konsep sains melalui eksperimen langsung",
   },
   {
     id: 8,
     category: "kegiatan",
-    image: "/music.jpg",
+    image: "/music.web",
     title: "Ekstrakulikuler Musik",
     description: "Mengembangkan bakat seni melalui musik",
   },
   {
     id: 9,
     category: "alam",
-    image: "/kids-with-bird.jpg",
+    image: "/kids-with-bird.web",
     title: "Pengamatan Burung",
     description: "Belajar tentang keanekaragaman hayati lokal",
   },
   {
     id: 10,
     category: "pembelajaran",
-    image: "/archery.jpg",
+    image: "/archery.web",
     title: "Ekstrakulikuler Memanah",
     description: "Mengasah fokus dan ketelitian melalui olahraga tradisional",
   },
@@ -131,9 +131,7 @@ export function GallerySection() {
   // PERF: memoized filter — recomputes only when category changes
   const filteredItems = useMemo(
     () =>
-      selectedCategory === "semua"
-        ? GALLERY_ITEMS
-        : GALLERY_ITEMS.filter((item) => item.category === selectedCategory),
+      selectedCategory === "semua" ? GALLERY_ITEMS : GALLERY_ITEMS.filter((item) => item.category === selectedCategory),
     [selectedCategory],
   );
 
@@ -146,9 +144,7 @@ export function GallerySection() {
   }, []);
 
   const handleToggleMore = useCallback(() => {
-    setVisibleCount((prev) =>
-      prev < filteredItems.length ? prev + ITEMS_PER_PAGE : ITEMS_PER_PAGE,
-    );
+    setVisibleCount((prev) => (prev < filteredItems.length ? prev + ITEMS_PER_PAGE : ITEMS_PER_PAGE));
   }, [filteredItems.length]);
 
   return (
@@ -163,17 +159,12 @@ export function GallerySection() {
             Program Unggulan dan Momen Berharga Kami
           </h2>
           <p className="text-lg text-[#5C5C5C] leading-relaxed">
-            Lihat bagaimana anak-anak kami tumbuh, belajar, dan bermain di
-            lingkungan yang penuh kasih sayang
+            Lihat bagaimana anak-anak kami tumbuh, belajar, dan bermain di lingkungan yang penuh kasih sayang
           </p>
         </div>
 
         {/* Filters */}
-        <div
-          className="flex flex-wrap justify-center gap-3 mb-12"
-          role="group"
-          aria-label="Filter kategori galeri"
-        >
+        <div className="flex flex-wrap justify-center gap-3 mb-12" role="group" aria-label="Filter kategori galeri">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.id}
@@ -221,9 +212,7 @@ export function GallerySection() {
                 <h3 className="text-xl font-bold text-[#2E2E2E] mb-2 group-hover:text-[#5BAA6A] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-[#5C5C5C] leading-relaxed">
-                  {item.description}
-                </p>
+                <p className="text-[#5C5C5C] leading-relaxed">{item.description}</p>
               </div>
             </motion.div>
           ))}

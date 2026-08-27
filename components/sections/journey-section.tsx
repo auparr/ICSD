@@ -38,7 +38,7 @@ const JOURNEY_STEPS: JourneyStep[] = [
       "Pengembangan motorik halus dan kasar",
       "Pembiasaan nilai-nilai Islam dasar",
     ],
-    image: "/kb.webp",
+    image: "/kb.web",
     color: "#F4C27F",
     href: "/program-pendidikan/KB",
   },
@@ -56,7 +56,7 @@ const JOURNEY_STEPS: JourneyStep[] = [
       "Pengenalan sains dan matematika kontekstual",
       "Praktik ibadah dan akhlak sehari-hari",
     ],
-    image: "/gallery-art-craft.webp",
+    image: "/gallery-art-craft.web",
     color: "#6BB9E0",
     href: "/program-pendidikan/TK",
   },
@@ -74,7 +74,7 @@ const JOURNEY_STEPS: JourneyStep[] = [
       "Pembelajaran Al-Quran dan Hadits mendalam",
       "Proyek sosial dan lingkungan",
     ],
-    image: "/gallery-learning-outdoor.webp",
+    image: "/gallery-learning-outdoor.web",
     color: "#5BAA6A",
     href: "/program-pendidikan/MI",
   },
@@ -103,8 +103,8 @@ export function JourneySection() {
             Tumbuh Bersama di Setiap Tahap
           </h2>
           <p className="text-lg text-[#5C5C5C] leading-relaxed">
-            Dari rasa ingin tahu pertama hingga kepemimpinan yang matang, kami
-            mendampingi setiap langkah perjalanan anak Anda
+            Dari rasa ingin tahu pertama hingga kepemimpinan yang matang, kami mendampingi setiap langkah perjalanan
+            anak Anda
           </p>
         </div>
 
@@ -130,11 +130,7 @@ export function JourneySection() {
                       backgroundColor: isActive ? `${step.color}20` : "#f0f0f0",
                     }}
                   >
-                    <Icon
-                      className="w-6 h-6"
-                      style={{ color: step.color }}
-                      aria-hidden="true"
-                    />
+                    <Icon className="w-6 h-6" style={{ color: step.color }} aria-hidden="true" />
                   </div>
                   <div className="text-left">
                     <p className="font-semibold text-[#2E2E2E]">{step.title}</p>
@@ -143,10 +139,7 @@ export function JourneySection() {
                 </button>
 
                 {index < JOURNEY_STEPS.length - 1 && (
-                  <div
-                    className="hidden md:block w-8 h-0.5 bg-[#5BAA6A]/30 mx-2"
-                    aria-hidden="true"
-                  />
+                  <div className="hidden md:block w-8 h-0.5 bg-[#5BAA6A]/30 mx-2" aria-hidden="true" />
                 )}
               </div>
             );
@@ -179,9 +172,7 @@ export function JourneySection() {
                 }}
               />
               <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                <span className="text-sm font-semibold text-[#2E2E2E]">
-                  {active.age}
-                </span>
+                <span className="text-sm font-semibold text-[#2E2E2E]">{active.age}</span>
               </div>
             </div>
 
@@ -195,26 +186,16 @@ export function JourneySection() {
                   {/* BUG FIX: original rendered an empty div inside icon wrapper — now renders the icon */}
                   {(() => {
                     const Icon = active.icon;
-                    return (
-                      <Icon
-                        className="w-7 h-7"
-                        style={{ color: active.color }}
-                        aria-hidden="true"
-                      />
-                    );
+                    return <Icon className="w-7 h-7" style={{ color: active.color }} aria-hidden="true" />;
                   })()}
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#2E2E2E]">
-                    {active.title}
-                  </h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#2E2E2E]">{active.title}</h3>
                   <p className="text-[#5C5C5C]">{active.subtitle}</p>
                 </div>
               </div>
 
-              <p className="text-[#5C5C5C] leading-relaxed mb-6">
-                {active.description}
-              </p>
+              <p className="text-[#5C5C5C] leading-relaxed mb-6">{active.description}</p>
 
               <ul className="space-y-3 mb-8">
                 {active.highlights.map((highlight) => (

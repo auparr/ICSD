@@ -69,7 +69,7 @@ export function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/children-studying-under-trees-with-sunlight-filter.webp"
+          src=""
           alt="Anak-anak belajar di bawah pohon di lingkungan sekolah alam"
           fill
           priority
@@ -96,7 +96,6 @@ export function HeroSection() {
 
       {/* Main content */}
       <div className="container mx-auto px-4 z-10 pt-20 pb-32 md:pb-20">
-        <h1>SITUS MASIH DALAM TAHAP PENGEMBANGAN!</h1>
         <motion.div
           className="max-w-4xl mx-auto text-center"
           variants={containerVariants}
@@ -116,14 +115,10 @@ export function HeroSection() {
             className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto text-pretty leading-relaxed"
             variants={itemVariants}
           >
-            Membangun karakter, rasa ingin tahu, dan kepemimpinan melalui alam
-            dan nilai-nilai Islam
+            Membangun karakter, rasa ingin tahu, dan kepemimpinan melalui alam dan nilai-nilai Islam
           </motion.p>
 
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            variants={itemVariants}
-          >
+          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center items-center" variants={itemVariants}>
             <Button
               asChild
               size="lg"
@@ -146,21 +141,11 @@ export function HeroSection() {
           </motion.div>
 
           {/* Stats */}
-          <motion.div
-            className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 max-w-2xl mx-auto"
-            variants={itemVariants}
-          >
+          <motion.div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 max-w-2xl mx-auto" variants={itemVariants}>
             {STATS.map((stat) => (
-              <div
-                key={stat.label}
-                className={`text-center ${stat.className ?? ""}`}
-              >
-                <p className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
-                </p>
-                <p className="text-sm md:text-base text-white/80">
-                  {stat.label}
-                </p>
+              <div key={stat.label} className={`text-center ${stat.className ?? ""}`}>
+                <p className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</p>
+                <p className="text-sm md:text-base text-white/80">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -173,10 +158,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator — FIX: removed redundant animate-pulse inside animate-bounce */}
-      <div
-        aria-hidden="true"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce"
-      >
+      <div aria-hidden="true" className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
           <div className="w-1.5 h-1.5 bg-white/70 rounded-full" />
         </div>

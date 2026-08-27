@@ -177,48 +177,42 @@ const EXTRACURRICULARS = [
   {
     icon: Waves,
     name: "Renang",
-    description:
-      "Latihan rutin di kolam renang dengan instruktur bersertifikat.",
+    description: "Latihan rutin di kolam renang dengan instruktur bersertifikat.",
     color: "#6BB9E0",
     bg: "bg-[#6BB9E0]/10",
   },
   {
     icon: Sword,
     name: "Pencak Silat",
-    description:
-      "Bela diri tradisional Indonesia — melatih disiplin, keberanian, dan identitas budaya.",
+    description: "Bela diri tradisional Indonesia — melatih disiplin, keberanian, dan identitas budaya.",
     color: "#F4C27F",
     bg: "bg-[#F4C27F]/10",
   },
   {
     icon: Target,
     name: "Panahan",
-    description:
-      "Sunnah Nabi yang melatih fokus, kesabaran, dan ketelitian sejak dini.",
+    description: "Sunnah Nabi yang melatih fokus, kesabaran, dan ketelitian sejak dini.",
     color: "#5BAA6A",
     bg: "bg-[#5BAA6A]/10",
   },
   {
     icon: Music2,
     name: "Musik & Seni",
-    description:
-      "Alat musik tradisional dan modern, serta seni rupa berbasis bahan alam.",
+    description: "Alat musik tradisional dan modern, serta seni rupa berbasis bahan alam.",
     color: "#6BB9E0",
     bg: "bg-[#6BB9E0]/10",
   },
   {
     icon: Sprout,
     name: "Pertanian & Berkebun",
-    description:
-      "Merawat kebun sekolah dari tanam hingga panen — belajar sabar dan syukur.",
+    description: "Merawat kebun sekolah dari tanam hingga panen — belajar sabar dan syukur.",
     color: "#5BAA6A",
     bg: "bg-[#5BAA6A]/10",
   },
   {
     icon: Building,
     name: "Pramuka",
-    description:
-      "Petualangan, survival skill, dan jiwa kebersamaan melalui kegiatan kepramukaan.",
+    description: "Petualangan, survival skill, dan jiwa kebersamaan melalui kegiatan kepramukaan.",
     color: "#F4C27F",
     bg: "bg-[#F4C27F]/10",
   },
@@ -235,7 +229,7 @@ export default function MIPage() {
         <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/gallery-learning-outdoor.webp"
+              src="/gallery-learning-outdoor.web"
               alt="Siswa MI Alam Salam ICSD belajar di alam terbuka"
               fill
               priority
@@ -260,8 +254,8 @@ export default function MIPage() {
               Madrasah Ibtidaiyah (MI) Alam
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/90 text-balance mb-10">
-              Tempat para pemimpin masa depan dibentuk — unggul secara akademik,
-              kuat dalam karakter, dan siap menjadi rahmatan lil 'alamin.
+              Tempat para pemimpin masa depan dibentuk — unggul secara akademik, kuat dalam karakter, dan siap menjadi
+              rahmatan lil 'alamin.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 mb-12">
@@ -294,10 +288,7 @@ export default function MIPage() {
             </div>
           </div>
 
-          <div
-            aria-hidden="true"
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-          >
+          <div aria-hidden="true" className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
             <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
               <div className="w-1.5 h-1.5 bg-white/70 rounded-full" />
             </div>
@@ -315,9 +306,8 @@ export default function MIPage() {
                 Lebih dari Sekadar Sekolah Dasar
               </h2>
               <p className="text-lg text-[#5C5C5C] leading-relaxed">
-                MI Alam Salam ICSD mempersiapkan anak untuk dunia nyata — bukan
-                hanya nilai rapor, tapi karakter, kepemimpinan, dan kontribusi
-                nyata.
+                MI Alam Salam ICSD mempersiapkan anak untuk dunia nyata — bukan hanya nilai rapor, tapi karakter,
+                kepemimpinan, dan kontribusi nyata.
               </p>
             </div>
 
@@ -327,21 +317,11 @@ export default function MIPage() {
                   key={title}
                   className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-[#F4C27F]/20"
                 >
-                  <div
-                    className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-6`}
-                  >
-                    <Icon
-                      className="w-7 h-7"
-                      style={{ color }}
-                      aria-hidden="true"
-                    />
+                  <div className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-6`}>
+                    <Icon className="w-7 h-7" style={{ color }} aria-hidden="true" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#2E2E2E] mb-3">
-                    {title}
-                  </h3>
-                  <p className="text-[#5C5C5C] leading-relaxed">
-                    {description}
-                  </p>
+                  <h3 className="text-xl font-bold text-[#2E2E2E] mb-3">{title}</h3>
+                  <p className="text-[#5C5C5C] leading-relaxed">{description}</p>
                 </div>
               ))}
             </div>
@@ -359,8 +339,8 @@ export default function MIPage() {
                 Kurikulum yang Membentuk Seutuhnya
               </h2>
               <p className="text-lg text-[#5C5C5C] leading-relaxed">
-                Mengacu pada Kurikulum Merdeka yang diperkaya pendekatan alam,
-                kepemimpinan, dan keislaman — setiap area saling terintegrasi.
+                Mengacu pada Kurikulum Merdeka yang diperkaya pendekatan alam, kepemimpinan, dan keislaman — setiap area
+                saling terintegrasi.
               </p>
             </div>
 
@@ -372,21 +352,14 @@ export default function MIPage() {
                       className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: `${color}20` }}
                     >
-                      <Icon
-                        className="w-6 h-6"
-                        style={{ color }}
-                        aria-hidden="true"
-                      />
+                      <Icon className="w-6 h-6" style={{ color }} aria-hidden="true" />
                     </div>
                     <h3 className="text-xl font-bold text-[#2E2E2E]">{area}</h3>
                   </div>
                   <ul className="space-y-3">
                     {items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <CheckCircle2
-                          className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5"
-                          aria-hidden="true"
-                        />
+                        <CheckCircle2 className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <span className="text-[#5C5C5C]">{item}</span>
                       </li>
                     ))}
@@ -404,7 +377,7 @@ export default function MIPage() {
               {/* Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <Image
-                  src="/archery.webp"
+                  src="/archery.web"
                   alt="Siswa MI Salam ICSD berlatih panahan"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -412,9 +385,7 @@ export default function MIPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-3 shadow-lg">
-                  <p className="text-sm font-semibold text-[#2E2E2E]">
-                    Senin – Jumat
-                  </p>
+                  <p className="text-sm font-semibold text-[#2E2E2E]">Senin – Jumat</p>
                   <p className="text-xs text-[#5C5C5C]">07.00 – 14.30 WIB</p>
                 </div>
               </div>
@@ -429,36 +400,27 @@ export default function MIPage() {
                 </h2>
 
                 <div className="space-y-4">
-                  {DAILY_SCHEDULE.map(
-                    ({ time, activity, icon: Icon, note }) => (
-                      <div key={time} className="flex gap-4 group">
-                        <div className="flex flex-col items-center">
-                          <div className="w-10 h-10 rounded-full bg-[#F4C27F]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F4C27F] transition-colors">
-                            <Icon
-                              className="w-5 h-5 text-[#C49040] group-hover:text-white transition-colors"
-                              aria-hidden="true"
-                            />
-                          </div>
-                          <div className="w-px flex-1 bg-[#F4C27F]/30 my-1" />
+                  {DAILY_SCHEDULE.map(({ time, activity, icon: Icon, note }) => (
+                    <div key={time} className="flex gap-4 group">
+                      <div className="flex flex-col items-center">
+                        <div className="w-10 h-10 rounded-full bg-[#F4C27F]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F4C27F] transition-colors">
+                          <Icon
+                            className="w-5 h-5 text-[#C49040] group-hover:text-white transition-colors"
+                            aria-hidden="true"
+                          />
                         </div>
-                        <div className="pb-4">
-                          <div className="flex items-center gap-2 mb-1">
-                            <Clock
-                              className="w-3.5 h-3.5 text-[#C49040]"
-                              aria-hidden="true"
-                            />
-                            <span className="text-xs font-semibold text-[#C49040]">
-                              {time}
-                            </span>
-                          </div>
-                          <p className="font-semibold text-[#2E2E2E]">
-                            {activity}
-                          </p>
-                          <p className="text-sm text-[#5C5C5C]">{note}</p>
-                        </div>
+                        <div className="w-px flex-1 bg-[#F4C27F]/30 my-1" />
                       </div>
-                    ),
-                  )}
+                      <div className="pb-4">
+                        <div className="flex items-center gap-2 mb-1">
+                          <Clock className="w-3.5 h-3.5 text-[#C49040]" aria-hidden="true" />
+                          <span className="text-xs font-semibold text-[#C49040]">{time}</span>
+                        </div>
+                        <p className="font-semibold text-[#2E2E2E]">{activity}</p>
+                        <p className="text-sm text-[#5C5C5C]">{note}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -466,14 +428,8 @@ export default function MIPage() {
         </section>
 
         {/* ── Extracurriculars ────────────────────────────────────────────── */}
-        <section
-          id="ekstrakurikuler"
-          className="py-20 md:py-28 bg-[#1A2E1A] relative overflow-hidden"
-        >
-          <div
-            aria-hidden="true"
-            className="absolute top-0 right-0 w-96 h-96 bg-[#F4C27F]/5 rounded-full blur-3xl"
-          />
+        <section id="ekstrakurikuler" className="py-20 md:py-28 bg-[#1A2E1A] relative overflow-hidden">
+          <div aria-hidden="true" className="absolute top-0 right-0 w-96 h-96 bg-[#F4C27F]/5 rounded-full blur-3xl" />
           <div
             aria-hidden="true"
             className="absolute bottom-0 left-0 w-64 h-64 bg-[#5BAA6A]/10 rounded-full blur-3xl"
@@ -488,52 +444,37 @@ export default function MIPage() {
                 Bakat Tak Terbatas, Pilihan Tak Terbatas
               </h2>
               <p className="text-lg text-white/70 leading-relaxed">
-                Di luar jam pelajaran, siswa MI bebas mengeksplorasi minat dan
-                bakat mereka melalui berbagai program ekstrakurikuler unggulan.
+                Di luar jam pelajaran, siswa MI bebas mengeksplorasi minat dan bakat mereka melalui berbagai program
+                ekstrakurikuler unggulan.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {EXTRACURRICULARS.map(
-                ({ icon: Icon, name, description, color, bg }) => (
-                  <div
-                    key={name}
-                    className="group bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 rounded-3xl p-8 transition-all duration-300"
-                  >
-                    <div
-                      className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-6`}
-                    >
-                      <Icon
-                        className="w-7 h-7"
-                        style={{ color }}
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {name}
-                    </h3>
-                    <p className="text-white/60 leading-relaxed text-sm">
-                      {description}
-                    </p>
+              {EXTRACURRICULARS.map(({ icon: Icon, name, description, color, bg }) => (
+                <div
+                  key={name}
+                  className="group bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 rounded-3xl p-8 transition-all duration-300"
+                >
+                  <div className={`w-14 h-14 rounded-2xl ${bg} flex items-center justify-center mb-6`}>
+                    <Icon className="w-7 h-7" style={{ color }} aria-hidden="true" />
                   </div>
-                ),
-              )}
+                  <h3 className="text-xl font-bold text-white mb-3">{name}</h3>
+                  <p className="text-white/60 leading-relaxed text-sm">{description}</p>
+                </div>
+              ))}
             </div>
 
             {/* Photo strip */}
             <div className="grid grid-cols-3 gap-4 mt-16">
               {[
-                { img: "/archery.webp", alt: "Ekskul panahan MI" },
+                { img: "/archery.web", alt: "Ekskul panahan MI" },
                 {
-                  img: "/gallery-learning-outdoor.webp",
+                  img: "/gallery-learning-outdoor.web",
                   alt: "Proyek alam MI",
                 },
-                { img: "/gallery-garden-exploration.webp", alt: "Berkebun MI" },
+                { img: "/gallery-garden-exploration.web", alt: "Berkebun MI" },
               ].map(({ img, alt }) => (
-                <div
-                  key={img}
-                  className="relative aspect-video rounded-2xl overflow-hidden"
-                >
+                <div key={img} className="relative aspect-video rounded-2xl overflow-hidden">
                   <Image
                     src={img}
                     alt={alt}
@@ -559,10 +500,8 @@ export default function MIPage() {
                   Enam Tahun yang Mengubah Segalanya
                 </h2>
                 <p className="text-[#5C5C5C] text-lg leading-relaxed mb-8">
-                  Enam tahun di MI Alam Salam ICSD bukan hanya tentang lulus
-                  ujian. Ini tentang membentuk manusia yang tahu siapa dirinya,
-                  apa tujuannya, dan bagaimana ia bisa memberi dampak bagi
-                  dunia.
+                  Enam tahun di MI Alam Salam ICSD bukan hanya tentang lulus ujian. Ini tentang membentuk manusia yang
+                  tahu siapa dirinya, apa tujuannya, dan bagaimana ia bisa memberi dampak bagi dunia.
                 </p>
                 <ul className="space-y-4 mb-10">
                   {[
@@ -573,10 +512,7 @@ export default function MIPage() {
                     "Fondasi karakter Islami yang telah teruji",
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-3">
-                      <CheckCircle2
-                        className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5"
-                        aria-hidden="true"
-                      />
+                      <CheckCircle2 className="w-5 h-5 text-[#5BAA6A] flex-shrink-0 mt-0.5" aria-hidden="true" />
                       <span className="text-[#5C5C5C]">{point}</span>
                     </li>
                   ))}
@@ -604,7 +540,7 @@ export default function MIPage() {
                 <div className="space-y-4">
                   <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery-learning-outdoor.webp"
+                      src="/gallery-learning-outdoor.web"
                       alt="Siswa MI belajar di alam"
                       fill
                       sizes="25vw"
@@ -613,7 +549,7 @@ export default function MIPage() {
                   </div>
                   <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery-prayer-time.webp"
+                      src="/gallery-prayer-time.web"
                       alt="Sholat berjamaah MI"
                       fill
                       sizes="25vw"
@@ -623,17 +559,11 @@ export default function MIPage() {
                 </div>
                 <div className="space-y-4 mt-8">
                   <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl">
-                    <Image
-                      src="/archery.webp"
-                      alt="Ekskul panahan MI"
-                      fill
-                      sizes="25vw"
-                      className="object-cover"
-                    />
+                    <Image src="/archery.web" alt="Ekskul panahan MI" fill sizes="25vw" className="object-cover" />
                   </div>
                   <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery-garden-exploration.webp"
+                      src="/gallery-garden-exploration.web"
                       alt="Proyek kebun MI"
                       fill
                       sizes="25vw"

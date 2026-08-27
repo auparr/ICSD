@@ -59,12 +59,7 @@ export function Navigation() {
     () =>
       NAV_LINK_TEMPLATES.map((link) => ({
         ...link,
-        href:
-          "href" in link
-            ? link.href
-            : isHome
-              ? `#${link.anchor}`
-              : `/#${link.anchor}`,
+        href: "href" in link ? link.href : isHome ? `#${link.anchor}` : `/#${link.anchor}`,
       })),
     [isHome],
   );
@@ -74,10 +69,7 @@ export function Navigation() {
   // Stable scroll handler
   const handleScroll = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(
-      () => setIsScrolled(window.scrollY > 30),
-      100,
-    );
+    timerRef.current = setTimeout(() => setIsScrolled(window.scrollY > 30), 100);
   }, []);
 
   useEffect(() => {
@@ -88,48 +80,27 @@ export function Navigation() {
     };
   }, [handleScroll]);
 
-  const closeAll = useCallback(
-    () => setMenu({ mobile: false, program: false }),
-    [],
-  );
+  const closeAll = useCallback(() => setMenu({ mobile: false, program: false }), []);
 
-  const toggleMobile = useCallback(
-    () => setMenu((prev) => ({ ...prev, mobile: !prev.mobile })),
-    [],
-  );
+  const toggleMobile = useCallback(() => setMenu((prev) => ({ ...prev, mobile: !prev.mobile })), []);
 
-  const toggleProgram = useCallback(
-    () => setMenu((prev) => ({ ...prev, program: !prev.program })),
-    [],
-  );
+  const toggleProgram = useCallback(() => setMenu((prev) => ({ ...prev, program: !prev.program })), []);
 
   // ─── Derived class strings ────────────────────────────────────────────────
-  const navTextClass = isScrolled
-    ? "text-[#2E2E2E] hover:text-[#5BAA6A]"
-    : "text-white hover:text-[#F4C27F]";
+  const navTextClass = isScrolled ? "text-[#2E2E2E] hover:text-[#5BAA6A]" : "text-white hover:text-[#F4C27F]";
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#FDFBF6]/60 backdrop-blur-xl border border-white/30 shadow-md"
-          : "bg-transparent"
+        isScrolled ? "bg-[#FDFBF6]/60 backdrop-blur-xl border border-white/30 shadow-md" : "bg-transparent"
       }`}
     >
-      <div
-        className={`container mx-auto px-4 transition-all duration-300 ${
-          isScrolled ? "py-2" : "py-3"
-        }`}
-      >
+      <div className={`container mx-auto px-4 transition-all duration-300 ${isScrolled ? "py-2" : "py-3"}`}>
         {/* ── Top bar ────────────────────────────────────────────────────── */}
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div
-              className={`relative transition-all duration-300 ${
-                isScrolled ? "w-12 h-12" : "w-14 h-14"
-              }`}
-            >
+            <div className={`relative transition-all duration-300 ${isScrolled ? "w-12 h-12" : "w-14 h-14"}`}>
               <Image
                 src="/school-logo.svg"
                 alt="Salam ICSD Logo"
@@ -147,11 +118,7 @@ export function Navigation() {
               >
                 Salam ICSD
               </p>
-              <p
-                className={`text-xs transition-colors ${
-                  isScrolled ? "text-[#5C5C5C]" : "text-white/80"
-                }`}
-              >
+              <p className={`text-xs transition-colors ${isScrolled ? "text-[#5C5C5C]" : "text-white/80"}`}>
                 Sekolah Alam
               </p>
             </div>
@@ -177,12 +144,8 @@ export function Navigation() {
                           href={program.href}
                           className="block p-3 rounded-lg hover:bg-[#E8F5E9] transition-colors"
                         >
-                          <p className="font-semibold text-[#2E2E2E]">
-                            {program.label}
-                          </p>
-                          <p className="text-sm text-[#5C5C5C]">
-                            {program.description}
-                          </p>
+                          <p className="font-semibold text-[#2E2E2E]">{program.label}</p>
+                          <p className="text-sm text-[#5C5C5C]">{program.description}</p>
                         </Link>
                       ))}
                     </div>
@@ -204,9 +167,7 @@ export function Navigation() {
 
           {/* Mobile hamburger */}
           <button
-            className={`md:hidden transition-colors ${
-              isScrolled ? "text-[#2E2E2E]" : "text-white"
-            }`}
+            className={`md:hidden transition-colors ${isScrolled ? "text-[#2E2E2E]" : "text-white"}`}
             onClick={toggleMobile}
             aria-label="Toggle menu"
             aria-expanded={menu.mobile}
@@ -228,11 +189,7 @@ export function Navigation() {
                       aria-expanded={menu.program}
                     >
                       <span>{link.label}</span>
-                      {menu.program ? (
-                        <ChevronUp size={20} />
-                      ) : (
-                        <ChevronDown size={20} />
-                      )}
+                      {menu.program ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                     </button>
 
                     {menu.program && (
@@ -262,10 +219,7 @@ export function Navigation() {
               </div>
             ))}
 
-            <Button
-              asChild
-              className="w-full bg-[#5BAA6A] hover:bg-[#4a9159] text-white rounded-full shadow-lg mt-4"
-            >
+            <Button asChild className="w-full bg-[#5BAA6A] hover:bg-[#4a9159] text-white rounded-full shadow-lg mt-4">
               <Link href={ctaHref} onClick={closeAll}>
                 Daftar Sekarang
               </Link>

@@ -73,7 +73,7 @@ export const metadata: Metadata = {
       "Sekolah Alam terbaik di Lamongan. Pendidikan berbasis alam dan nilai Islam untuk KB, TK, dan MI. Belajar Bersama Alam, Tumbuh dengan Iman.",
     images: [
       {
-        url: "/children-studying-under-trees-with-sunlight-filter.webp",
+        url: "",
         width: 1200,
         height: 630,
         alt: "Anak-anak belajar di alam terbuka di Sekolah Alam Insan Cendekia Sunan Drajat Lamongan",
@@ -85,9 +85,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Salam ICSD – Sekolah Alam Lamongan",
-    description:
-      "Pendidikan berbasis alam dan nilai Islam. KB, TK, MI di Lamongan, Jawa Timur.",
-    images: ["/children-studying-under-trees-with-sunlight-filter.webp"],
+    description: "Pendidikan berbasis alam dan nilai Islam. KB, TK, MI di Lamongan, Jawa Timur.",
+    images: [""],
   },
 
   // ── Robots ────────────────────────────────────────────────────────────────
@@ -115,10 +114,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/school-logo.svg", type: "image/svg+xml" },
-      { url: "/school-logo.png", type: "image/png" },
+      { url: "/school-logo.webp", type: "image.web" },
     ],
-    apple: "/school-logo.png",
-    shortcut: "/school-logo.png",
+    apple: "/school-logo.webp",
+    shortcut: "/school-logo.webp",
   },
 
   // ── Category (helps Google classify the site) ─────────────────────────────
@@ -126,11 +125,7 @@ export const metadata: Metadata = {
 };
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={geist.variable} suppressHydrationWarning>
       <head>
@@ -148,8 +143,8 @@ export default function RootLayout({
               name: "Sekolah Alam Insan Cendekia Sunan Drajat",
               alternateName: ["Salam ICSD", "Sekolah Alam ICSD"],
               url: SITE_URL,
-              logo: `${SITE_URL}/school-logo.png`,
-              image: `${SITE_URL}/children-studying-under-trees-with-sunlight-filter.webp`,
+              logo: `${SITE_URL}/school-logo.webp`,
+              image: `${SITE_URL}/`,
               description:
                 "Sekolah Alam berbasis Islam di Lamongan, Jawa Timur. Menyediakan jenjang Kelompok Bermain (KB), Taman Kanak-kanak (TK), dan Madrasah Ibtidaiyah (MI).",
               address: {
@@ -170,13 +165,7 @@ export default function RootLayout({
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                  ],
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                   opens: "07:00",
                   closes: "15:00",
                 },
@@ -188,22 +177,19 @@ export default function RootLayout({
                   {
                     "@type": "Course",
                     name: "Kelompok Bermain (KB)",
-                    description:
-                      "Program pendidikan untuk anak usia 3-4 tahun berbasis alam",
+                    description: "Program pendidikan untuk anak usia 3-4 tahun berbasis alam",
                     url: `${SITE_URL}/program-pendidikan/KB`,
                   },
                   {
                     "@type": "Course",
                     name: "Taman Kanak-kanak (TK)",
-                    description:
-                      "Program pendidikan untuk anak usia 5-6 tahun berbasis alam",
+                    description: "Program pendidikan untuk anak usia 5-6 tahun berbasis alam",
                     url: `${SITE_URL}/program-pendidikan/TK`,
                   },
                   {
                     "@type": "Course",
                     name: "Madrasah Ibtidaiyah (MI)",
-                    description:
-                      "Program pendidikan untuk anak usia 7-12 tahun berbasis alam",
+                    description: "Program pendidikan untuk anak usia 7-12 tahun berbasis alam",
                     url: `${SITE_URL}/program-pendidikan/MI`,
                   },
                 ],
@@ -219,12 +205,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
